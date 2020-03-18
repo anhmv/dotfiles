@@ -1,0 +1,33 @@
+export ZSH="/Users/anhmv/.oh-my-zsh"
+
+ZSH_THEME="avit"
+prompt_context(){}
+
+source $ZSH/oh-my-zsh.sh
+
+DEFAULT_USER="anhmv"
+DISABLE_UNTRACKED_FILES_DIRTY=true
+
+ZSH_TMUX_AUTOCONNECT=true
+tmux source-file ~/.tmux.conf
+
+alias vim="nvim"
+alias top="vtop"
+alias webapp="cd /Volumes/WIP/projects/bespokify/source/webapp/"
+alias demand="cd /Volumes/WIP/projects/bespokify/source/bespokify-on-demand/"
+alias ui="cd /Volumes/WIP/projects/bespokify/source/bespokify-ui/"
+alias clover="cd /Volumes/WIP/projects/bespokify/source/clover/"
+alias dashboard="cd /Volumes/WIP/projects/bespokify/source/dashboard/"
+alias zozo="cd /Volumes/WIP/projects/bespokify/source/zozo/"
+
+plugins=(git node brew tmux fzf)
+
+source ~/.bash_profile
+
+#
+# Set default editor to nvim
+export EDITOR='nvim'
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
