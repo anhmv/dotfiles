@@ -1,3 +1,5 @@
+# Specify the fzf bin path
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.config/nvim/plugged/fzf/bin:$PATH
 export ZSH="/Users/anhmv/.oh-my-zsh"
 
 ZSH_THEME="avit"
@@ -23,3 +25,37 @@ export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+#
+## FZF FUNCTIONS ##
+
+# fo [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fo() {
+  local files
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+}
+
+# fuzzy grep via rg and open in vim with line number
+fgr() {
+  local file
+  local line
+
+  read -r file line <<<"$(rg --no-heading --line-number $@ | fzf -0 -1 | awk -F: '{print $1, $2}')"
+
+  if [[ -n $file ]]
+  then
+     vim $file +$line
+  fi
+}
+
+# fbr [FUZZY PATTERN] - Checkout specified branch
+# Include remote branches, sorted by most recent commit and limited to 30
+fbr() {
+  local branches branch
+  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
