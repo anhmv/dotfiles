@@ -260,7 +260,7 @@ cmap w!! w !sudo tee %
 " Vim's default buffer
 vnoremap <leader>p "_dP
 
-nmap <leader>; :Buffers<CR>
+nmap ; :Buffers<CR>
 nmap <leader>t :Files<CR>
 nnoremap <leader>g :Rg<CR>
 

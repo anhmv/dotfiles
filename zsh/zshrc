@@ -4,25 +4,17 @@ ZSH_THEME="avit"
 prompt_context(){}
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bash_profile
 
 DEFAULT_USER="anhmv"
 DISABLE_UNTRACKED_FILES_DIRTY=true
 
-ZSH_TMUX_AUTOCONNECT=true
-tmux source-file ~/.tmux.conf
-
 alias vim="nvim"
-alias top="vtop"
-alias webapp="cd /Volumes/WIP/projects/bespokify/source/webapp/"
-alias demand="cd /Volumes/WIP/projects/bespokify/source/bespokify-on-demand/"
-alias ui="cd /Volumes/WIP/projects/bespokify/source/bespokify-ui/"
-alias clover="cd /Volumes/WIP/projects/bespokify/source/clover/"
-alias dashboard="cd /Volumes/WIP/projects/bespokify/source/dashboard/"
-alias zozo="cd /Volumes/WIP/projects/bespokify/source/zozo/"
 
 plugins=(git node brew tmux fzf)
 
-source ~/.bash_profile
+ZSH_TMUX_AUTOCONNECT="true"
+tmux source-file ~/.tmux.conf
 
 #
 # Set default editor to nvim
