@@ -268,6 +268,10 @@ nnoremap <leader>g :Rg<CR>
 " MISC.                                    "
 " ======================================== "
 
+" console.log
+autocmd FileType vue,javascript vmap cll yoconsole.log('[LOG] => ');<Esc>==f> pf'a, <Esc>p
+autocmd FileType vue,javascript nmap cll yiwoconsole.log('[LOG] => ');<Esc>==f> pf'a, <Esc>p
+" autocmd FileType javascript vmap cll yoconsole.log('[LOG] => <Esc>pa', <Esc>p
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
