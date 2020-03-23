@@ -37,10 +37,6 @@ Plug 'rstacruz/vim-closer'
 " Tmux/Neovim movement integration
 Plug 'christoomey/vim-tmux-navigator'
 
-" Icons
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 " === Git Plugins === "
 " Enable git changes to be shown in sign column
 Plug 'mhinz/vim-signify'
@@ -52,14 +48,17 @@ Plug 'scrooloose/nerdtree'
 
 " Colorscheme
 Plug 'mhartington/oceanic-next'
+"
+" Icons
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Customized vim status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Icons
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" GLSL Shader language
+Plug 'tikhomirov/vim-glsl'
 
 " Vue
 Plug 'leafOfTree/vim-vue-plugin'

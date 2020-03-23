@@ -1,7 +1,6 @@
 scriptencoding utf-8
 
 source ~/.config/nvim/plugins.vim
-
 " ======================================== "
 " EDITING OPTIONS                          "
 " ======================================== "
@@ -129,24 +128,11 @@ endif
 " Don't show git changes to current file in airline
 let g:airline#extensions#hunks#enabled=0
 
-" === echodoc === "
-" Enable echodoc on startup
-let g:echodoc#enable_at_startup = 1
-
-" === vim-javascript === "
-" Enable syntax highlighting for JSDoc
-let g:javascript_plugin_jsdoc = 1
-
-" === vim-jsx === "
-" highlight jsx syntax only .jsx files
-let g:jsx_ext_required = 1
-
-" === javascript-libraries-syntax === "
-let g:used_javascript_libs = 'vue,d3,lo-dash'
-
 " === Signify === "
 let g:signify_sign_delete = '-'
 
+" === vim-glsl === "
+autocmd! BufNewFile,BufRead *.vert,*.frag set ft=glsl
 
 " ======================================== "
 " UI                                       "
