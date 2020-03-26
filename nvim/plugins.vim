@@ -63,6 +63,10 @@ Plug 'tikhomirov/vim-glsl'
 " Vue
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'digitaltoad/vim-pug'
+
+" COC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 if has("autocmd")
