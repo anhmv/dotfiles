@@ -12,6 +12,7 @@ DEFAULT_USER="anhmv"
 DISABLE_UNTRACKED_FILES_DIRTY=true
 
 alias vim="nvim"
+alias vi="nvim"
 
 plugins=(git node brew tmux fzf)
 
@@ -49,11 +50,10 @@ fgr() {
   fi
 }
 
-# fbr [FUZZY PATTERN] - Checkout specified branch
-# Include remote branches, sorted by most recent commit and limited to 30
+# fbr - checkout git branch (including remote branches)
 fbr() {
   local branches branch
-  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branches=$(git branch --all | grep -v HEAD) &&
   branch=$(echo "$branches" |
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
