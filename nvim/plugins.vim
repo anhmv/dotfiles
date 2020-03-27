@@ -67,6 +67,9 @@ Plug 'digitaltoad/vim-pug'
 " COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 if has("autocmd")
