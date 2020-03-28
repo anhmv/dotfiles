@@ -344,7 +344,7 @@ function! OpenFloatTerm(...)
   let win = nvim_open_win(buf, v:true, opts)
 
   if a:0 == 0
-    terminal bash -c "ls"
+    terminal
   else
     call termopen(a:1)
   endif
