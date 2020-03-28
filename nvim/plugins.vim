@@ -70,6 +70,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'anhmv/vim-float-window'
+
 call plug#end()
 
 if has("autocmd")
