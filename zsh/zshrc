@@ -17,7 +17,7 @@ DISABLE_UNTRACKED_FILES_DIRTY=true
 alias vim="nvim"
 alias vi="nvim"
 
-plugins=(git node brew tmux fzf)
+plugins=(git node brew tmux fzf zsh-autosuggestions)
 
 ZSH_TMUX_AUTOCONNECT="true"
 tmux source-file ~/.tmux.conf

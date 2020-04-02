@@ -72,6 +72,9 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'anhmv/vim-float-window'
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+
 call plug#end()
 
 if has("autocmd")
