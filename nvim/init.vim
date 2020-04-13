@@ -241,9 +241,8 @@ nmap <silent> <leader>dj <Plug>(coc-implementation)
 "   <leader>y - Automatically remove trailing whitespace
 nmap <leader>y :StripWhitespace<CR>
 
-" === vim-vue-plugin
-let g:vim_vue_plugin_load_full_syntax = 1
-let g:vim_vue_plugin_use_pug = 0
+" === vim-vue
+let g:vue_pre_processors = ['pug', 'stylus']
 
 " === Search shorcuts === "
 "   <leader>h - Find and replace

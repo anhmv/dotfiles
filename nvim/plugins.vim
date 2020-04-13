@@ -61,7 +61,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tikhomirov/vim-glsl'
 
 " Vue
-Plug 'leafOfTree/vim-vue-plugin'
+Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
 
 " COC
