@@ -1,7 +1,3 @@
-" ============================================================================ "
-" ===                               PLUGINS                                === "
-" ============================================================================ "
-
 " check whether vim-plug is installed and install it if necessary
 let plugpath = expand('<sfile>:p:h'). '/autoload/plug.vim'
 if !filereadable(plugpath)
@@ -20,7 +16,6 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-" === Editing Plugins === "
 " Trailing whitespace highlighting & automatic fixing
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -37,12 +32,10 @@ Plug 'rstacruz/vim-closer'
 " Tmux/Neovim movement integration
 Plug 'christoomey/vim-tmux-navigator'
 
-" === Git Plugins === "
 " Enable git changes to be shown in sign column
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
-" === UI === "
 " File explorer
 Plug 'scrooloose/nerdtree'
 
@@ -79,9 +72,3 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'junegunn/vader.vim'
 
 call plug#end()
-
-if has("autocmd")
-  augroup templates
-    " autocmd BufNewFile *.vue 0r ~/.dotfiles/nvim/templates/component.vue
-  augroup END
-endif
