@@ -38,7 +38,6 @@ nnoremap <leader>g :Rg<CR>
 " stupid console.log
 autocmd FileType vue,javascript vnoremap cll yoconsole.log('[LOG] => ');<Esc>==f> pf'a, <Esc>p
 autocmd FileType vue,javascript nnoremap cll yiwoconsole.log('[LOG] => ');<Esc>==f> pf'a, <Esc>p
-" autocmd FileType javascript vmap cll yoconsole.log('[LOG] => <Esc>pa', <Esc>p
 
 nnoremap <Leader>a :call OpenFloatTerm()<CR>
 nnoremap <Leader>at :call OpenFloatTerm("tig")<CR>
