@@ -40,7 +40,6 @@ Back up your current Neovim configuration dictionary
 
 Symlinks
 
-    $ ln -s ~/.dotfiles/nvim/plugins.vim ~/.config/nvim/plugins.vim
     $ ln -s ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 
 Start Neovim by enter the command `nvim` and install plugins
