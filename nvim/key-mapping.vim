@@ -50,3 +50,5 @@ nnoremap <leader>ev :e $MYVIMRC<CR>
 
 " Reload the config
 nnoremap <leader>rv :source $MYVIMRC<CR>
+
+nnoremap nh :noh<CR>
