@@ -2,6 +2,10 @@
 
 This repository is the house of my lightweight development toolboxes and configurations. It is a powerful, minimalist development environment.
 
+<p align="center"> 
+  <img src="./assets/screenshot.png">
+</p>
+
 ## Prerequisites
 
 - Tmux
