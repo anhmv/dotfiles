@@ -75,6 +75,9 @@ Plug 'anhmv/vim-float-window'
 " Elixir
 Plug 'elixir-editors/vim-elixir'
 
+" Vader
+Plug 'junegunn/vader.vim'
+
 call plug#end()
 
 if has("autocmd")
@@ -82,4 +85,3 @@ if has("autocmd")
     " autocmd BufNewFile *.vue 0r ~/.dotfiles/nvim/templates/component.vue
   augroup END
 endif
-
