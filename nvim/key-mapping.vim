@@ -35,7 +35,7 @@ nnoremap ; :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 nnoremap <leader>g :Rg<CR>
 
-" console.log
+" stupid console.log
 autocmd FileType vue,javascript vnoremap cll yoconsole.log('[LOG] => ');<Esc>==f> pf'a, <Esc>p
 autocmd FileType vue,javascript nnoremap cll yiwoconsole.log('[LOG] => ');<Esc>==f> pf'a, <Esc>p
 " autocmd FileType javascript vmap cll yoconsole.log('[LOG] => <Esc>pa', <Esc>p
@@ -45,3 +45,9 @@ nnoremap <Leader>at :call OpenFloatTerm("tig")<CR>
 
 " Run jest for current test
 nnoremap <leader>te :call CocAction('runCommand', 'jest.singleTest')<CR>
+
+" Edit my Vim config
+nnoremap <leader>ev :e $MYVIMRC<CR>
+
+" Reload the config
+nnoremap <leader>rv :source $MYVIMRC<CR>
