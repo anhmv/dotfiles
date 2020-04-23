@@ -58,3 +58,20 @@ nnoremap nh :noh<CR>
 nnoremap - ddp
 " Move the current line up a line // doesn't work with the last row
 nnoremap _ ddkP
+
+
+" OPERATOR-PENDING MAPPINGS
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap an( :<c-u>normal! f(va(<cr>
+onoremap il( :<c-u>normal! F(vi(<cr>
+onoremap al( :<c-u>normal! F(va(<cr>
+
+onoremap in{ :<c-u>normal! f{vi{<cr>
+onoremap an{ :<c-u>normal! f{va{<cr>
+onoremap il{ :<c-u>normal! F{vi{<cr>
+onoremap al{ :<c-u>normal! F{va{<cr>
+
+onoremap in[ :<c-u>normal! f[vi[<cr>
+onoremap an[ :<c-u>normal! f[va[<cr>
+onoremap il[ :<c-u>normal! F[vi[<cr>
+onoremap al[ :<c-u>normal! F[va[<cr>
