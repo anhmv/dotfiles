@@ -52,7 +52,7 @@ nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>rv :source $MYVIMRC<CR>
 
 " Temporarily stop highlight search results
-nnoremap nh :noh<CR>
+nnoremap <leader>c :noh<CR>
 
 " Move the current line down a line
 nnoremap - ddp
