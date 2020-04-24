@@ -1,16 +1,16 @@
 scriptencoding utf-8
 
-let dot_path = $HOME . "/.dotfiles/nvim/"
+let b:dot_path = $HOME . "/.dotfiles/nvim/"
 
-let scripts = split(globpath(dot_path, "**/*.vim"), '\n')
-let self = dot_path . "init.vim"
-let plugins = dot_path . "plugins.vim"
+let b:scripts = split(globpath(b:dot_path, "**/*.vim"), '\n')
+let b:self = b:dot_path . "init.vim"
+let b:plugins = b:dot_path . "plugins.vim"
 
-exec ":source " . plugins
+exec ":source " . b:plugins
 
-for config in scripts
+for config in b:scripts
   " do not load itself and the plug file
-  if self != config && self != plugins
+  if b:self != config && b:self != b:plugins
     " echom ":source " . config
     exec ":source " . config
   endif
