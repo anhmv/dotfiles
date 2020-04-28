@@ -1,9 +1,0 @@
-autocmd FileType vue nnoremap <silent> data /\s\+data<cr>zt:noh<cr>
-autocmd FileType vue nnoremap <silent> props /\s\+props<cr>zt:noh<cr>
-autocmd FileType vue nnoremap <silent> computed /\s\+computed<cr>zt:noh<cr>
-autocmd FileType vue nnoremap <silent> watch /\s\+watch<cr>zt:noh<cr>
-autocmd FileType vue nnoremap <silent> created /\s\+created<cr>zt:noh<cr>
-autocmd FileType vue nnoremap <silent> mounted /\s\+mounted<cr>zt:noh<cr>
-autocmd FileType vue nnoremap <silent> methods /\s\+methods<cr>zt:noh<cr>
-autocmd FileType vue nnoremap <silent> css /<style<cr>zt:noh<cr>
-autocmd FileType vue nnoremap <silent> script /<script<cr>zt:noh<cr>
