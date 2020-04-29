@@ -60,6 +60,8 @@ nnoremap - ddp
 " Move the current line up a line // doesn't work with the last row
 nnoremap _ ddkP
 
+" Close all other buffers except the current one
+nnoremap <leader>bd :<c-u>up <bar> %bd! <bar> e#<cr>
 
 " OPERATOR-PENDING MAPPINGS
 onoremap in( :<c-u>normal! f(vi(<cr>
