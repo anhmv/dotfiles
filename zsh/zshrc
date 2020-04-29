@@ -14,22 +14,25 @@ source ~/.bash_profile
 DEFAULT_USER="anhmv"
 DISABLE_UNTRACKED_FILES_DIRTY=true
 
-alias vim="nvim"
+# Set default editor to nvim
+export EDITOR='nvim'
 alias vi="nvim"
+alias vim="nvim"
+alias nano="nvim"
+alias code="nvim"
+alias emacs="nvim"
+
 
 plugins=(git node brew tmux fzf zsh-autosuggestions)
 
 ZSH_TMUX_AUTOCONNECT="true"
 tmux source-file ~/.tmux.conf
 
-# Set default editor to nvim
-export EDITOR='nvim'
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
-
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-#
+
 ## FZF FUNCTIONS ##
 
 # fo [FUZZY PATTERN] - Open the selected file with the default editor
