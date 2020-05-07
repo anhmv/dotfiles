@@ -52,9 +52,6 @@ nnoremap <leader>ev :e $MYVIMRC<CR>
 " Reload the config
 nnoremap <leader>rv :source $MYVIMRC<CR>
 
-" Temporarily stop highlight search results
-nnoremap <leader>c :noh<CR>
-
 " Move the current line down a line
 nnoremap - ddp
 " Move the current line up a line // doesn't work with the last row
