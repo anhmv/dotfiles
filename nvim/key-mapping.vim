@@ -41,6 +41,7 @@ autocmd FileType vue,javascript nnoremap cll yiwoconsole.log('[LOG] => ');<Esc>=
 
 nnoremap <Leader>a :call OpenFloatTerm()<CR>
 nnoremap <Leader>at :call OpenFloatTerm("tig")<CR>
+nnoremap <Leader>ar :call OpenFloatTerm("newsboat")<CR>
 nnoremap <Leader>av :call OpenFloatTerm("vtop")<CR>
 
 " Run jest for current test
