@@ -4,21 +4,22 @@
   (defvar anhmv/indent-width 4)
   :config
   (setq frame-title-format '("Anh Mac")
-        ring-bell-function 'ignore
-        frame-resize-pixelwise t
-        default-directory "~/")
+    ring-bell-function 'ignore
+    frame-resize-pixelwise t
+    default-directory "~/"
+  )
 
   (tool-bar-mode -1) (menu-bar-mode -1)
 
   ;; better scrolling experience
   (setq scroll-margin 0
-        scroll-conservatively 101 > 100
-        scroll-preserve-screen-position t
-        auto-window-vscroll nil)
+    scroll-conservatively 101 > 100
+    scroll-preserve-screen-position t
+    auto-window-vscroll nil)
 
   ;; always use spaces for indentation
   (setq-default indent-tabs-mode nil
-                tab-width anhmv/indent-width))
+        tab-width anhmv/indent-width))
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
@@ -27,10 +28,10 @@
 
 (use-package web-mode
   :mode (("\\.html?\\'" . web-mode)
-         ("\\.css\\'"   . web-mode)
-         ("\\.jsx?\\'"  . web-mode)
-         ("\\.tsx?\\'"  . web-mode)
-         ("\\.json\\'"  . web-mode))
+     ("\\.css\\'"   . web-mode)
+     ("\\.jsx?\\'"  . web-mode)
+     ("\\.tsx?\\'"  . web-mode)
+     ("\\.json\\'"  . web-mode))
   :config
   (setq web-mode-markup-indent-offset 2) ; HTML
   (setq web-mode-css-indent-offset 2)    ; CSS
@@ -61,25 +62,13 @@
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-(use-package doom-themes
+(use-package sublime-themes
   :ensure t
   :config
   ;; Global settings (default)
   ;; (setq doom-themes-enable-bold t
   ;;      doom-themes-enable-italic t)
-  (load-theme 'doom-dracula t)
-
-  ;; Enable flashing mode-line on errors
-  (doom-themes-visual-bell-config)
-
-  ;; Enable custom neotree theme (all-the-icons must be installed!)
-  (doom-themes-neotree-config)
-
-  ;; or for treemacs users
-  (setq doom-themes-treemacs-theme "doom-colors")
-  (doom-themes-treemacs-config)
-
-  (doom-themes-org-config))
+  (load-theme 'hickey t))
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
@@ -148,4 +137,13 @@
 (use-package vue-mode
   :ensure t
 )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(use-package neotree
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c n") 'neotree-toggle)
+)
+(use-package all-the-icons)
 #+END_SRC
