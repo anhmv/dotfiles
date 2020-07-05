@@ -118,6 +118,11 @@
   (projectile-mode +1)
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (setq projectile-project-search-path '(
+    "/Volumes/WIP/projects/bespokify/source",
+    "/Volumes/WIP/projects/pistachio",
+    "/Volumes/WIP/study"
+  ))
 )
 #+END_SRC
 
@@ -146,4 +151,40 @@
   (global-set-key (kbd "C-c n") 'neotree-toggle)
 )
 (use-package all-the-icons)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(use-package counsel
+  :ensure t
+  :after ivy
+  :config (counsel-mode))
+
+(use-package ivy
+  :ensure t
+  :defer 0.1
+  :bind (("C-c C-r" . ivy-resume)
+         ("C-x B" . ivy-switch-buffer-other-window))
+  :custom
+  (ivy-count-format "(%d/%d) ")
+  (ivy-use-virtual-buffers t)
+  :config (ivy-mode)
+)
+
+(use-package ivy-rich
+  :ensure t
+  :after ivy
+  :custom
+  (ivy-virtual-abbreviate 'full
+                          ivy-rich-switch-buffer-align-virtual-buffer t
+                          ivy-rich-path-style 'abbrev)
+  :config
+  (ivy-set-display-transformer 'ivy-switch-buffer
+                               'ivy-rich-switct-buffer-transformer))
+
+(use-package swiper
+  :ensure t
+  :after ivy
+  :bind (("C-s" . swiper)
+         ("C-r" . swiper))
+)
 #+END_SRC
