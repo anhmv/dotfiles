@@ -47,6 +47,7 @@
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
+(setq evil-want-C-i-jump nil)
 (use-package "evil"
   :ensure t ;; install the evil package if not install
   :init
@@ -186,5 +187,30 @@
   :after ivy
   :bind (("C-s" . swiper)
          ("C-r" . swiper))
+)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(use-package deft
+  :ensure t
+  :config
+  (setq deft-extensions '("org"))
+  (setq def-directory "~/.deft")
+  (setq def-recursive t)
+  (global-set-key (kbd "C-c d") 'deft)
+)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(use-package evil-org
+  :ensure t
+  :after org
+  :config
+  (add-hook 'org-mode-hook 'evil-org-mode)
+  (add-hook 'evil-org-mode-hood
+            (lambda ()
+              (evil-org-set-key-theme)))
+  (require 'evil-org-agenda)
+  (evil-org-agenda-set-keys)
 )
 #+END_SRC
