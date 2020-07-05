@@ -195,8 +195,10 @@
   :ensure t
   :config
   (setq deft-extensions '("org"))
-  (setq def-directory "~/.deft")
-  (setq def-recursive t)
+  (setq deft-default-extension "org")
+  (setq deft-directory "~/.deft")
+  (setq deft-recursive t)
+  (setq deft-auto-save-interval nil)
   (global-set-key (kbd "C-c d") 'deft)
 )
 #+END_SRC
@@ -213,4 +215,8 @@
   (require 'evil-org-agenda)
   (evil-org-agenda-set-keys)
 )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(use-package restclient)
 #+END_SRC
