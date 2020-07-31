@@ -32,9 +32,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(helm-ag-base-command "rg --no-heading")
+ '(helm-ag-success-exit-status (quote (0 2)))
  '(package-selected-packages
    (quote
-    (sublime-themes vue-mode use-package projectile powerline neotree highlight-numbers highlight-escape-sequences evil-magit evil-collection doom-themes all-the-icons))))
+    (helm-rg sublime-themes vue-mode use-package projectile powerline neotree highlight-numbers highlight-escape-sequences evil-magit evil-collection doom-themes all-the-icons))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

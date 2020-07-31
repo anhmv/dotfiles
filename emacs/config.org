@@ -155,38 +155,28 @@
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-(use-package counsel
+(use-package helm
   :ensure t
-  :after ivy
-  :config (counsel-mode))
-
-(use-package ivy
-  :ensure t
-  :defer 0.1
-  :bind (("C-c C-r" . ivy-resume)
-         ("C-x B" . ivy-switch-buffer-other-window))
-  :custom
-  (ivy-count-format "(%d/%d) ")
-  (ivy-use-virtual-buffers t)
-  :config (ivy-mode)
+  :demand
+  :preface
+  (require 'helm-config)
+  :bind (("M-x" . helm-M-x)
+         ("C-x C-f" . helm-find-files)
+         ("C-x b" . helm-buffers-list))
+  :config
+  (helm-mode 1)
 )
 
-(use-package ivy-rich
+(use-package helm-projectile
   :ensure t
-  :after ivy
-  :custom
-  (ivy-virtual-abbreviate 'full
-                          ivy-rich-switch-buffer-align-virtual-buffer t
-                          ivy-rich-path-style 'abbrev)
-  :config
-  (ivy-set-display-transformer 'ivy-switch-buffer
-                               'ivy-rich-switct-buffer-transformer))
+)
 
-(use-package swiper
+(use-package helm-ag
   :ensure t
-  :after ivy
-  :bind (("C-s" . swiper)
-         ("C-r" . swiper))
+  :config
+  (custom-set-variables
+   '(helm-ag-base-command "rg --no-heading --ignore-files --no-hidden")
+   `(helm-ag-success-exit-status '(0 2)))
 )
 #+END_SRC
 
@@ -219,4 +209,15 @@
 
 #+BEGIN_SRC emacs-lisp
 (use-package restclient)
+
+(defvar my-leader-map (make-sparse-keymap)
+  "Keymap for \"leader key\" shortcuts.")
+
+;; binding "," to the keymap
+(define-key evil-normal-state-map "," my-leader-map)
+
+(define-key my-leader-map "b" 'helm-buffers-list)
+(define-key my-leader-map "f" 'helm-projectile-find-file)
+(define-key my-leader-map "g" 'helm-do-ag-project-root)
+(define-key my-leader-map "n" 'neotree-toggle)
 #+END_SRC
