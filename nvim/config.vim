@@ -6,7 +6,7 @@ set autoread
 
 " Enable line numbers
 set number
-set relativenumber
+" set relativenumber
 
 " Yank and paste with the system clipboard
 set clipboard=unnamed
