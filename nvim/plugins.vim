@@ -49,6 +49,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Customized vim status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 
 " GLSL Shader language
 Plug 'tikhomirov/vim-glsl'
