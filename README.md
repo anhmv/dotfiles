@@ -9,7 +9,6 @@ This repository is the house of my lightweight development toolboxes and configu
 ## Prerequisites
 
 - Tmux
-- ZSH
 - Neovim
 - Ripgrep
 - FZF
@@ -20,13 +19,6 @@ This repository is the house of my lightweight development toolboxes and configu
 Clone this repository inside your home dictionary, and name it `.dotfiles` to make it invisible.
 
     git clone https://github.com/anhmv/dotfiles.git ~/.dotfiles
-
-### ZSH
-
-Backup your current ZSH configuration file, and create a symlink to the dotfiles.
-
-    $ mv ~/.zshrc ~/.zshrc.bak
-    $ ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 
 ### TMUX
 
